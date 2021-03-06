@@ -1,0 +1,31 @@
+ double x, y, p, t;
+            string mode;
+
+            Console.WriteLine("Input your mode");
+            mode = Console.ReadLine();
+            Console.WriteLine("Input your mouse position X  ");
+            x=double.Parse(Console.ReadLine());
+            Console.WriteLine("Input your mouse position Y ");
+            y=double.Parse(Console.ReadLine());
+            p = Math.Pow(x - 1, 2);
+            t = Math.Sqrt(y) + 1;
+
+            if (x > 0) //mouse 
+            {
+                if(mode == "Price") 
+                {
+                    Console.WriteLine("Your position is {0},{1} " ,t,y);
+                }
+                if (mode == "Time")
+                {
+                    Console.WriteLine("Your position is {0},{1}", x,p);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid position");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid position mouse !!!!!");
+            }
